@@ -23,6 +23,22 @@ use exactly....
 |-> .env
         |> SECRET_KEY = "Any string you want to pass".
 
+
+//For encoding the password
+password.Encode("Yash@1234") // this will return a hashed value that you can save inside your DB.
+
+const hashedPass = password.Encode("Yash@1234");
+
+
+//For validating the password
+
+password.Validate(Arg1 , Arg2) // this function will return true/false value.
+
+where Arg1 == the password you want to match(raw password)
+      Arg2 == the password comes from the database ( something like user.password)
+
+
+
 ```
 
 ## Contributing
