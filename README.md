@@ -7,9 +7,9 @@ PasswordProtector is a JS package that will help you to easily encode or decode 
 Use the package manager [npm](https://www.npmjs.com/package/password_protector) to install PasswordProtector.
 
 ```bash
-npm install PasswordProtector
+npm install password_protector
         or
-npm i Passwordprotector
+npm i password_protector
 ```
 
 ## Usage
