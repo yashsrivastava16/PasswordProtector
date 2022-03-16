@@ -1,19 +1,14 @@
 {
-  "name": "passwordprotector",
+  "name": "password_protector",
   "version": "1.0.0",
-  "description": "A package that will help you to code/decode your password.",
+  "description": "Password Protector and Hasher",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yashsrivastava16/PasswordProtector.git"
-  },
-  "author": "Yash Srivastava",
+  "author": "Ujjawal Gupta, Yash Gupta",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yashsrivastava16/PasswordProtector/issues"
-  },
-  "homepage": "https://github.com/yashsrivastava16/PasswordProtector#readme"
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  }
 }

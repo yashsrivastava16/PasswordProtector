@@ -1,26 +1,21 @@
-// This will our main page where we gonna work on only two funtion...
+const crypto = require("crypto");
+const dotenv = require("dotenv");
 
+dotenv.config();
 
+const encryptPass = (password, salt = process.env.SECRET_KEY) => {
+  const hash = crypto.createHmac("sha512", salt).update(password).digest("hex");
+  return {
+    password,
+    hash,
+  };
+};
 
-// TODO 1: Create a function which will encode the String
+const hashedPass = encryptPass("yash@1234");
+const savedPass = hashedPass.hash;
 
-module.exports.Encode = (password) =>{
-    // create a functionality that will convert this password into hashed/secured password 
-
-
-    return hashedPassword;
-}
-
-
-
-//TODO 2 : Create a function which compare simplePassword with hashedPassword.
-
-
-
-module.exports.Validate = (simplePass , hashedPass)=>{
-    // create a functionality that will compare both and return true or false..
-
-
-
-    return true || false ;
+if (savedPass == encryptPass("yash@124").hash) {
+  console.log("Password Matched");
+} else {
+  console.log("Incorrect Password!!");
 }
