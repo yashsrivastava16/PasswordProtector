@@ -17,6 +17,12 @@ npm i Passwordprotector
 ```Node.js
 const password = require("PasswordProtect");
 
+You will require the .env file to use this package..
+
+use exactly....
+|-> .env
+        |> SECRET_KEY = "Any string you want to pass".
+
 ```
 
 ## Contributing
