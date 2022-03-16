@@ -1,6 +1,6 @@
 {
   "name": "password_protector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Password Protector and Hasher",
   "main": "index.js",
   "scripts": {
