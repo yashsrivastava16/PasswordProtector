@@ -3,19 +3,22 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const encryptPass = (password, salt = process.env.SECRET_KEY) => {
+// For encoding the simple password.
+
+module.exports.Encode = (password, salt = process.env.SECRET_KEY) => {
   const hash = crypto.createHmac("sha512", salt).update(password).digest("hex");
-  return {
-    password,
-    hash,
-  };
+  return hash;
 };
 
-const hashedPass = encryptPass("yash@1234");
-const savedPass = hashedPass.hash;
 
-if (savedPass == encryptPass("yash@124").hash) {
-  console.log("Password Matched");
-} else {
-  console.log("Incorrect Password!!");
+// For validating the password.
+module.exports.Validate = (Password , hashedPass) => {
+    const validating = this.Encode(Password);
+    if(hashedPass === validating){
+        return true;
+    }else{
+        return false;
+    }
+
 }
+
