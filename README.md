@@ -4,7 +4,7 @@ PasswordProtector is a JS package that will help you to easily encode or decode 
 
 ## Installation
 
-Use the package manager [npm](https://www.npmjs.com/package/) to install PasswordProtector.
+Use the package manager [npm](https://www.npmjs.com/package/password_protector) to install PasswordProtector.
 
 ```bash
 npm install PasswordProtector
@@ -15,7 +15,7 @@ npm i Passwordprotector
 ## Usage
 
 ```Node.js
-const password = require("PasswordProtect");
+const password = require("password_protect");
 
 You will require the .env file to use this package..
 
