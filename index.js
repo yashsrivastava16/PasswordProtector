@@ -3,8 +3,9 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-// For encoding the simple password.
 
+
+// For encoding the simple password.
 module.exports.Encode = (password, salt = process.env.SECRET_KEY) => {
   const hash = crypto.createHmac("sha512", salt).update(password).digest("hex");
   return hash;
@@ -19,6 +20,14 @@ module.exports.Validate = (Password , hashedPass) => {
     }else{
         return false;
     }
-
 }
 
+// For validate password strenght
+
+
+module.exports.Check = (password) =>{
+    const condition =  /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{8,}$/;
+    const result = condition.test(password)
+    return result;
+
+}

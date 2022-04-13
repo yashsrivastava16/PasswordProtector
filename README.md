@@ -25,9 +25,9 @@ use exactly....
 
 
 //For encoding the password
-password.Encode("Yash@1234") // this will return a hashed value that you can save inside your DB.
+const rawPassword = "Yash@1234";
 
-const hashedPass = password.Encode("Yash@1234");
+const hashedPass = password.Encode(rawPassword); // this will return a hashed value that you can save inside your DB.
 
 
 //For validating the password
@@ -37,6 +37,21 @@ password.Validate(Arg1 , Arg2) // this function will return true/false value.
 where Arg1 == the password you want to match(raw password)
       Arg2 == the password comes from the database ( something like user.password)
 
+
+// For validating the strenght of your password
+
+const password = "xyz@example" // This password is given by the user
+
+password.Check(password)
+
+This Check funtion will validate your password on the behalf of
+Alleast 8 characters in length
+Alleast 1 letters in Upper Case
+Alleast 1 Special Character (!@#$&*)
+Alleast 1 numerals (0-9)
+Alleast 1 letters in Lower Case
+
+After validating this Check function will return true/false.
 
 
 ```
