@@ -27,12 +27,12 @@ use exactly....
 //For encoding the password
 const rawPassword = "Yash@1234";
 
-const hashedPass = password.Encode(rawPassword); // this will return a hashed value that you can save inside your DB.
+const hashedPass = password.Encrypt(rawPassword); // this will return a hashed value that you can save inside your DB.
 
 
 //For validating the password
 
-password.Validate(Arg1 , Arg2) // this function will return true/false value.
+password.Check(Arg1 , Arg2) // this function will return true/false value.
 
 where Arg1 == the password you want to match(raw password)
       Arg2 == the password comes from the database ( something like user.password)
@@ -42,7 +42,7 @@ where Arg1 == the password you want to match(raw password)
 
 const password = "xyz@example" // This password is given by the user
 
-password.Check(password)
+password.Validate(password)
 
 This Check funtion will validate your password on the behalf of
 Alleast 8 characters in length
